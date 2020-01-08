@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media screen and (max-width: $bp-large) {
+        font-size: 45%;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        font-size: 37%;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        font-size: 33%;
+    }
+
+    @media screen and (max-width: $bp-smallest) {
+        font-size: 30%;
+    }
+
+    
+}
+
+.container {
+    display: grid;
+    grid-template-rows: min-content 75vh min-content min-content min-content 40vw min-content;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media screen and (max-width: $bp-medium) {
+        grid-template-rows: min-content 75vh min-content min-content min-content min-content 40vw min-content;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        grid-template-rows: min-content 50vh min-content min-content min-content min-content 40vw min-content;
+    }
+
+}
+
+.primary__btn {
+    text-align: center;
+
+    &--btn {
+        background-color: $primaryColor;
+        color: $white;
+        border: none;
+        border-radius: 0;
+        font-style: 1.5rem;
+        text-transform: uppercase;
+        padding: 1.1rem 2rem;
+        cursor: pointer;
+        transition: all .2s;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+
+        &:hover {
+            background-color: $primaryColorDark;
+        }
+    }
+}
+
+.secondary__btn {
+    &--btn {
+        background-color: #147642;
+        color: $white;
+        border: none;
+        border-radius: 0;
+        font-size: 1.5rem;
+        font-style: 1.8rem;
+        text-transform: uppercase;
+        padding: 1.8rem 3rem;
+        cursor: pointer;
+        transition: all .2s;
+        margin-top: 2rem;
+        margin-bottom: 1.6rem;
+
+        &:hover {
+            background-color: #0d4b2a;
+        }
+    }
+}
+
+.btn__top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    background-color: $primaryColor;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+    display: none;
+
+    &:hover,
+    &:active {
+        background-color: $primaryColorDark;
+    }
+
+    
+    
+    &--icon {
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        fill: $white;
+        &:hover {
+            animation: pulsate 1s infinite;
+        }
+        
+    }
+
+}
+
+.mb-sm {margin-bottom: 1rem; }
+.mb-md {margin-bottom: 3rem; }
+.mb-lg {margin-bottom: 6rem; }
+.mb-hg {margin-bottom: 8rem; }
+

@@ -1,0 +1,58 @@
+.hero {
+    grid-column: full-start / full-end;
+    padding: 3rem;
+    text-align: center;
+    align-items: center;
+
+    @media screen and (max-width: $bp-small) {
+        grid-row: 3 / 3;
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            height: .2rem;
+            display: block;
+            background-color: $primaryColor;
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    &__arrow {
+        width: 2rem;
+        height: 2rem;
+        animation: pulsate 1s infinite;
+        fill: $primaryColor;
+       
+        
+    }
+    
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+       
+    }
+
+    50% {
+        transform: scale(1.2);
+        
+    }
+
+    100% {
+        transform: scale(1);
+        
+    }
+}

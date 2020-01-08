@@ -1,0 +1,37 @@
+.series {
+    grid-column: col-start 2 / col-end 7;
+    @include link;
+
+    &__content {
+       
+        @include content;
+        transform: skew(-12deg);
+       
+        & > * {
+            transform: skew(12deg);       
+        }
+        
+        &--img {
+            margin-right: 3rem; 
+            img {
+                width: 15rem;
+                height: 15rem;
+            } 
+        }
+
+    }
+
+    &__text {
+       @include flex-col;
+    
+        &--paragraph {
+            @include medium-paragraph;
+            
+        }
+
+       &--small-paragraph {
+           @include small-paragraph;
+       }
+    }
+}
+

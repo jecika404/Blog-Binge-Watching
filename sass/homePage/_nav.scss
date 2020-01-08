@@ -1,0 +1,36 @@
+.navbar {
+    grid-column: full-start / full-end;
+    font-size: 2.5rem;
+    background: rgb(30,39,46);
+    background: linear-gradient(61deg, rgba(30,39,46,1) 3%, rgba(71,78,87,1) 60%, rgba(224,226,230,1) 89%);    
+    box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.75); 
+}
+
+.nav {
+    display: flex;
+    
+    &__item {
+        list-style: none;
+        padding: .8rem;
+    }
+
+    &__item:hover,
+    &__item:active {
+        background-color: $primaryColor;
+        transition: background-color .6s;
+        cursor: pointer;
+        
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 400;
+        text-decoration: none;
+        cursor: pointer;
+       
+    }
+
+ 
+}

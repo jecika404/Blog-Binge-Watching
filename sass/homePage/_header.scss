@@ -1,0 +1,19 @@
+.header {
+    background-image: url(../img/tms.jpg);
+    background-size: 70vw;
+    background-repeat: no-repeat;
+    grid-column: full-start / col-end 6;
+
+    @media screen and (max-width: $bp-large) {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+    }
+
+    @media screen and (max-width: $bp-medium) {
+        grid-column: full-start / full-end;
+        background-size: 100%;
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,102 @@
+.footer {
+    grid-column: full-start / full-end;
+    
+    &__social {
+            text-align: center;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            grid-gap: 2rem;
+
+            // OVO TREBA ISPAREVITI //
+            margin: 0 7rem 0 7rem;
+                
+           
+            @media screen and (max-width: $bp-medium) {
+                grid-gap: 1rem;
+                padding: 1rem;
+            }
+
+            @media screen and (max-width: $bp-small) {
+                grid-gap: 1rem;
+                padding: 0;
+            }
+
+            @media screen and (max-width: $bp-small) {
+                padding: 2rem;
+                grid-gap: 3rem;
+            }
+
+        
+       
+        &--yt {
+            @include social;
+            fill: #c4302b;
+      
+        }
+
+        &--fb {
+            @include social;
+            fill: 	#3b5998;
+        }
+
+        &--in {
+            @include social;
+            fill: #e1306c;
+        }
+
+        &--re {
+            @include social;
+            fill: #FF5700;
+        }
+        
+    }
+
+    &__nav {
+            text-align: center;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            grid-gap: 2rem;
+            list-style: none;
+            
+
+        &--link:link,
+        &--link:visited {
+            color: $white;
+            font-size: 1.7rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $fontColor;
+            display: block;
+            padding: 1.5rem;
+            transition: all .3s;
+        }
+
+        &--link:hover,
+        &--link:active {
+            background-color: #0d4b2a;
+            transform: translateY(-.3rem);
+        }
+    }
+}
+
+.footer-bg {
+    margin-top: 5rem;
+    background-color: $grayDark;
+
+    &__copyright {
+        text-align: center;
+        color: $white;
+        font-size: 1.3rem;
+        padding-bottom: .5rem;
+        font-weight: 300;
+        
+    }
+}
+
+.icon {
+    width: 6rem;
+    height: 6rem; 
+}
